@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Plagremoverpro</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/lonew.png" rel="icon">
+  <link href="assets/img/lonew.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+ 
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top" >
+    <div class="container d-flex align-items-center">
+
+      <!-- <h1 class="logo me-auto"><a href="index.html">PRP</a></h1> -->
+
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="assets/img/lonew.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar" >
+        <ul>
+        
+          <li><a class="nav-link scrollto"  href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto"  href="privacy.html">Privacy policy</a></li>
+          <li><a class="nav-link scrollto"  href="blog.html">Blog</a></li>
+          <li><a class="nav-link scrollto"  href="contactus.html">Contact</a></li>
+          <li><a class="getstarted scrollto" id="menuItem">Premium</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      
+    </div>
+  </header><!-- End Header -->
+
+  <!-- page navigation -->
+
+  
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+        
+          <h1>Plagiarism<span class="h1color"> <br/> 
+            Remover Pro Tool</span></h1> 
+          <h2 style="color: white;">Its a 100% Free AI tool to Remove plagiarism</h2>
+        
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/img/animimg.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+  <form id="input-form">
+  <div class="container10">
+    
+    <div class="flex-container">
+    <div class="box content1"><div class="left-column_1_after" id="left-column">
+      <div class="text-view">
+        <span class="text" style="color: black; font-weight: bold;">Before</span>
+      
+      </div>
+      
+      <textarea type="text"  id="query-input"  class="textarea" 
+       placeholder="Past here your original text that you want to remove plagiarism 
+      (Ctrl + V1)  "></textarea>
+    </div></div>
+    <div class="box content2"><div class="right-column_after" id="right-column">
+      <div class="text-view">
+        <span class="text" style="color: black; font-weight: bold; ">After</span>
+        <div class="copy_icon" style="color: black; font-weight: bold;">
+          <img src="assets/img/copy.png" class="icon_copy" id="copyIcon" ><br>Copy
+        </div>
+        <div id="toast" class="toast">Your plagiarism free content copied successfully</div>
+        
+      </div>
+      <div class="text_view_after" >
+        <p style="color: black;" id="response-text" class="response-text"> 
+        </p>
+      </div>
+    </div></div>
+  </div>
+    <div class="box content3" >
+      <div class="left-column_1" >
+      <textarea type="text"  class="textareaq" id="textView111" placeholder="Past here your original text that you want to remove plagiarism 
+      (Ctrl + V2)"></textarea>
+    </div></div>
+  </div>
+  <div class="button-container">
+    <button class="bottom-button"  type="submit" onclick="saveText()" >Remove Plagiarism</button>
+  </div>
+  
+</form>
+
+
+<script>
+  var issave = true;
+  function saveText() {
+    if(issave){
+      var text = document.getElementById("textView111").value;
+      document.getElementById("query-input").value = text;
+      issave=false;
+    }
+  }
+</script>
+
+
+  <!-- <form id="input-form">
+    <input type="text" id="query-input" placeholder="Enter text">
+     <button type="submit">Save</button> -->
+<!-- </form> --> 
+
+<!-- <div id="response-container">
+    <p id="response-text" class="response-text"></p>
+</div> -->
+
+<!-- Include the JavaScript library to make AJAX requests (e.g., jQuery) -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // $(document).ready(function() {
+        //     // Handle form submission
+        //     $('#input-form').submit(function(event) {
+        //         event.preventDefault();
+
+        //         // Get the user-entered query
+        //         const query = $('#query-input').val();
+
+        //         // Send the POST request to the API endpoint
+        //         $.ajax({
+        //             url: 'https://plagremoverpro.com/backend/public/api/screen_data/getUniqueData',
+        //             method: 'POST',
+        //             data: {
+        //                 query: query
+        //             },
+        //             dataType: 'json',
+        //             success: function(data) {
+        //                 // Extract the text value from the response
+        //                 const text = data.text;
+
+        //                 // Update the text view with the extracted text
+        //                 const responseTextElement = document.getElementById('response-text');
+        //                 responseTextElement.textContent = text;
+        //             },
+        //             error: function(error) {
+        //                 console.error('Error:', error);
+        //             }
+        //         });
+        //     });
+        // });
+
+
+        $(document).ready(function() {
+  // Handle form submission
+  $('#input-form').submit(function(event) {
+    event.preventDefault();
+
+    // Show the progress dialog
+    showProgressDialog();
+
+    // Get the user-entered query
+    const query = $('#query-input').val();
+
+    // Send the POST request to the API endpoint
+    $.ajax({
+      url: 'https://plagremoverpro.com/backend/public/api/screen_data/getUniqueData',
+      method: 'POST',
+      data: {
+        query: query
+      },
+      dataType: 'json',
+      beforeSend: function() {
+        // Show the progress dialog before sending the request
+        showProgressDialog();
+      },
+      success: function(data) {
+        // Extract the text value from the response
+        const text = data.text;
+
+        // Update the text view with the extracted text
+        const responseTextElement = document.getElementById('response-text');
+        responseTextElement.textContent = text;
+
+        // Hide the progress dialog on success
+        hideProgressDialog();
+      },
+      error: function(error) {
+        console.error('Error:', error);
+
+        // Hide the progress dialog on error
+        hideProgressDialog();
+      }
+    });
+  });
+});
+
+// Function to show the progress dialog
+function showProgressDialog() {
+  $('#progress-dialog').fadeIn();
+}
+
+// Function to hide the progress dialog
+function hideProgressDialog() {
+  $('#progress-dialog').fadeOut();
+}
+
+    </script>
+
+
+
+
+ 
+
+   <!-- ======= Tool Section ======= -->
+   
+  
+   <!-- ======= End tool section ======= -->
+<!-- API DATA  section -->
+<div class="back_responsive" >
+
+
+  <div>
+    <p style="padding: 20px;">
+      Plagiarism is not  limited to the words you write. Copying an image and using it as your own content can also be considered plagiarism.   The simple concept of plagiarism is that anything you copy and use in your content  will be considered a plagiarism term.  Eliminating plagiarism is very important  when you want to publish your content on the internet.   According to Neil Patel, using plagiarized content is easy, but there are  many problems with it, the most common being bad reputation.<br>Use the plagiarism AI base removing  tool to remove plagiarism from any content you want . It is a perfect way to eliminate plagiarism, but it has the disadvantage of being very time consuming. This means that it is not an ideal method when someone is trying to remove plagiarism from a large amount of content.Our tools are highly specialized applications that guarantee the best possible results. <br>It uses synonyms in a really consistent way and fundamentally changes the text. This is very important as it determines the quality of new content. After all, you want to ensure the best possible results for great results.There are a lot of things to consider when removing plagiarism, but you need to make sure the first is a solid solution.This makes plagiarism remover a great choice due to its highly accurate results.The second strategy is to use a quality online plagiarism removal tool that will make the process much easier. You won't have to do any rewriting yourself because the computer will do it all.The problem is that you have to make sure you find a quality tool. If you use one that isn't of the highest quality,<br><br> you risk ending up with content that is only partially usable.\\nPlagiarism Remover is a rewriting tool that uses specific methods to change any textual content. The problem is that in some cases, most tools only change a few words for each paragraph. This will appear in the results as plagiarism and will likely be removed from the search results.But our solution does not have this problem. Correctly uses synonyms and combinations of words that change the content. This is extremely helpful in finding a quick and effective way to get rid of all plagiarism risks.This is why our tool is perfect for your needs. However, it is the best choice for many other reasons and we will look at some of the most relevant ones..This is how you can easily turn your plagiarism article into a plagiarism free article. This means your article is 100% fresh ,free and unique. If you have a blogging website and no idea to write a blog article, then this tool is for you. You can simply copy a specific topic and article from the Internet and directly paste it Plagiarism pro on my website and click the Remove Plagiarism button. <br><br>Wait a few seconds and your content is now 101% unique and plagiarism free. You then copy this unique content to your website. In this way, you can write 'infinity' number of articles on your blog easily and without any problems. And yes, your article is ranked on Google
+  Use the plagiarism AI base removing  tool to remove plagiarism from any content you want . This is how you can easily turn your plagiarism article into a plagiarism free article. This means your article is 100% fresh ,free and unique. If you have a blogging website and no idea to write a blog article, then this tool is for you. You can simply copy a specific topic and article from the Internet and directly paste it Plagiarism pro on my website and click the Remove Plagiarism button. Wait a few seconds and your content is now 101% unique and plagiarism free. You then copy this unique content to your website. In this way, you can write 'infinity' number of articles on your blog easily and without any problems. And yes, your article is ranked on Google.
+    </p>
+  </div>
+
+
+<!-- End API DAtA Section -->
+  <!-- ======= Post cards section ======= -->
+  <div style="height: 30px;"></div>
+  <h2 style="margin-left: 40px;">Recent Posts</h2>
+   <div class="container1122"  data-aos="fade-up">
+     <div>
+      
+     </div>
+    <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+    <div class="card11" id="post_for_blog" onclick="goToNextPage_b()" href="#blog.html">
+      <img src="https://plagremoverpro.com/plagpro-images/p1.jpg" alt="Image" class="card-image">
+      <h2 class="card-title"><a href="blog.html">UNLEASHING THE POWER OF AI: 
+        PLAGIARISM REMOVER PRO AI TOOL</a></h2>
+      <p class="card-description">
+        What is plagiarism? <br> How to remove plagiarism?<br> What is a plagiarism remover pro AI tool? </p>
+          <p class="card-description-complete">
+            Plagiarism remover pro AI tool is essential for
+             those who want to convert plagiarized content into 
+             original content without wasting their time. 
+             This tool is easy, fast and safe to use. 
+             </p>
+    </div>
+  </div>
+  <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+    <div class="card22" onclick="goToNextPage_b()" href="#blog.html">
+      <img src="https://plagremoverpro.com/plagpro-images/p2.jpg" alt="Image" class="card-image">
+      <h2 class="card-title"> <a href="blog.html">UP YOUR WRITING ROUTINE WITH PLAGIARISM REMOVER PRO </a> </h2>
+      <p class="card-description">
+              What is plagiarism? Is it only limited to text?
+              <br> What is online plagiarism remover pro? 
+              <br> How to use plagiarism remover pro online?</p>
+        <p class="card-description-complete">
+          Plagiarism remover pro provides the facility to remove the plagiarism 
+          from the contents such as articles, essays and research papers. 
+          The development of this cost-free tool is done using the contemporary
+           algorithms.
+               </p>
+    </div> 
+    </div>
+    <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+    <div class="card11" onclick="goToNextPage_b()" href="#blog.html">
+      <img src="https://plagremoverpro.com/plagpro-images/p3.jpg" alt="Image" class="card-image">
+      <h2 class="card-title"> <a href="blog.html"> HOW TO CONVERT YOUR FACEBOOK PROFILE INTO A PAGE: STEP-BY-STEP TUTORIAL </a> </h2>
+      <p class="card-description">
+        What is the difference between a Facebook profile and a Facebook page?
+         <br>Why would you need to convert a Facebook profile into a page? 
+         
+      
+        </p>
+        <p class="card-description-complete">
+          In this contemporary epoch, we all know how to create a
+           Facebook profile. Most of us are not familiar with the process of creating a Facebook page.
+         </p>
+    </div>
+    </div>
+    <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+    <div class="card22" onclick="goToNextPage_b()" href="#blog.html">
+      <img src="https://plagremoverpro.com/plagpro-images/p4.jpg" alt="Image" class="card-image">
+      <h2 class="card-title"><a href="blog.html">RISE OF MACHINES: EXPLORING THE MULTITUDES OF AI TOOLS AVAILABLE TODAY
+      </a></h2>
+      <p class="card-description">
+        TOP 10 AI TOOL<br>
+        Scikit Learn <br>
+        Tensorflow <br>
+        PyTorch <br>
+      </p>
+      <p class="card-description-complete">
+        Major breakthrough and completely change the way things are done. This will be a valuable contribution to all major industries.
+       </p>
+    </div>
+    </div>
+  </div>
+<div style="height: 10px;"></div>
+  <!-- backgound card -->
+<div class="container112233"  >
+ 
+  <!-- ======= start rectangle Section ======= -->
+  <div class="container1122333">
+    <div class="row">
+      <div class="rectangle11">
+        <h2 class="title" style="color: #FF6632; font-size: 28;">What you know about Plagiarism..?</h2>
+        <p class="description" style="color: black; font-size: 14;">We're headed for a time when content creators and programmers
+          are running around afraid of the real Sky internet most advance technology.
+               Called ChatGPT also some people say that it release also a ChatGPT 4    is
+                coming, and rumors suggest that it could bring massive improvements
+                ChatGPT OpenAI's already incredibly impressive language skills.,that
+                also looking forward to Google for Google Bard, this software is 
+                currently the talk of the town and it's the kind of technology that's
+                 causing worry in the tech industry. Whenever text is copied from 
+                 one source to be used elsewhere without crediting the original 
+                 source. , it is considered plagiarism.It is essential to unders 
+                 that this is not a good situation. Search enginespenalize any                content that has been copied from other sources, and 
+                plagiarism can be easily detected.</p>
+      </div>
+      <div class="vertical-divider"></div>
+      <div class="rectangle22">
+        <h2 class="title" style="color: #FF6632; font-size: 28;">Plagiarism remover-AI-Base tool work ?</h2>
+        <p class="description" style="color: black; font-size: 14;">Plagiarism Remover helps remove plagiarism from content using
+          artificial intelligence, whether it's an article, essay or research
+          paper,synopses ,documents,proposals etc. The development
+          of this free tool is done using modern algorithms that focus
+          on providing accurate results with modern vocabulary.
+          transcribes content using Natural Language Processing
+          (NLP) and Deep Learning technology like ChatGPT to 
+          help create plagiarism-free content by preserving
+          the original context of the underlying text. All you
+           need is to copy the content and paste it in the 
+          given space to make your content plagiarism
+           free.The development
+           of this free tool is done using modern algorithms that focus
+           (NLP) and Deep Learning technology like ChatGPT to 
+           help create plagiarism-free content by preserving
+           the original context of the underlying text.</p>
+      </div>
+    </div>
+    <div class="horizontal-divider"></div>
+    <div class="row">
+      <div class="rectangle11">
+        <h2 class="title" style="color: #FF6632; font-size: 28;"> How does Plagremover pro tool work ?</h2>
+        <p class="description" style="color: black; font-size: 14;"> Our Plaremoverpro-AI-base  tool  is  a 
+          specialized application that ensures the
+        result. It uses synonyms in a way that is 
+      cohesive and radically changes the text 
+    to sense. This is very important because it 
+  determines the quality of new content.
+  you want to ensure the best results to achieve 
+  excellent result. There are many things to
+  when removing plagiarism, but you need to make 
+  sure that the first one is a reliable solution for it. 
+  This makes plagiarism remover a fantastic choice
+  due to its highly accurate and qualify results.
+           of this free tool is done using modern algorithms that focus
+           (NLP) and Deep Learning technology like ChatGPT to 
+           help create plagiarism-free content by preserving
+           the original context of the underlying text.hatGPT to 
+           help create plagiarism-free content by preserving
+           the original context of the underlying text.</p>
+      </div>
+      <div class="vertical-divider"></div>
+      <div class="rectangle22">
+        <h2 class="title" style="color: #FF6632; font-size: 28;" >  How to use Plaremoverpro AItool ?</h2>
+        <p class="description" style="color: black; font-size: 14;" >  There are many different ways to get rid of
+          plagiarism, but it is essential to considerhow
+          long these methods take. The following are the
+          most common ways for people to remove plagiar
+          The first is to take existing content and rewrite ev 
+           ery word while keeping the main idea intact.It is a 
+          perfect way to eliminate   plagiarism, but it has the 
+           disadvantage of being     very time consuming. This  
+            means that  it is    an ideal method   when   someone 
+          is trying to remove  plagiarism   from  a large amount 
+           of  content.  The  second  strategy  is  to  use a quality
+          only   plagiarism  Pro   removal  tool that   will  make the
+           process muc  easier. You  won't  have to do any rewriting
+           yourself because the compute r wil l do it all. The problem
+           is that you have  make  sure  you find a quality tool for plag.
+           removal. If you use one that isn't of  the  </p>
+      </div>
+    </div>
+  </div>
+  <!-- ======= Question card  Section ======= -->
+
+
+<!-- ======= Question Section ======= -->
+
+<h2 style=" color: #FF6632; margin-top: 15px;">Multi-language support</h2>
+  <div class="code-container">
+    <p> This plagiarism remover can be used worldwide as it supports more than 10 languages. Some of these languages are listed below.</p>
+    <pre>
+      <code class="line-numbered" > 
+        <span></span> •- English
+        <span></span> •- Spanish 
+        <span></span> •- Turkish 
+        <span></span> •- Chines 
+        <span></span> •- Russian 
+        <span></span> •- Japanese
+        <!-- Add more lines as needed -->
+      </code>
+    </pre>
+  </div>
+  
+</div>
+  
+</div>
+<!-- end background card -->
+<div class="screenshot_back">
+  
+<div style="height: 10px;"></div>
+<!-- who can use  -->
+<h2 style="padding-left: 30px; color: #FF6632;">Who can use the Plagremoverpro..?</h2>
+<div class="api_data">
+  
+  <p>A large number of people may use a plagiarism free remover for many specific reasons. This is very important for anyone who wants to make sure their content is 100% specific. Some writers like to reword existing content to create something new. With our tool, this process becomes much more manageable. Our tool is ideal for the following people:? Writers who want to decrease time on rewriting projects. People who want to create new content for their blogs. Anyone looking for a different way to say something. People who write content and want to create new versions of that content. Given the benefits of using this type of tool, it makes perfect sense that authors see it as a time saver. Do Remember, the best way to make any project easier to handle is to simplify the workflow. This is why tools like PlagiarismPro Remover can be so great and valuable. Eliminating the worry of having to rewrite content can be a huge time-saving advantage. Quality of service will undoubtedly play a significant role in this process.</p>
+</div>
+
+<!-- how to use  -->
+
+<h2 style="padding-left: 30px; color: #FF6632;">How to use  Plaremoverpro?</h2>
+<div class="api_data">
+  <div class="code-container">
+    <pre>
+      <code class="line-numbered" > 
+        <span></span> •- Copy your original content
+        <span></span> •- paste your original content on Plaremoverpro artificial intelligence tool,in below picture
+      
+        <!-- Add more lines as needed -->
+      </code>
+      </pre>
+</div>
+
+
+
+</div>
+
+
+
+<!-- image one -->
+<div class="row" data-aos="zoom-in">
+<div class="container1212">
+  <div class="image-container">
+    <img class="background-image" src="https://plagremoverpro.com/plagpro-images/c2.png" class="img-fluid" alt="" >
+  </div>
+  <div class="text-container">
+    <h2 style="color: black;">How to use  Plaremoverpro?</h2>
+    <p class="overlay-text">1- Copy your original content<br>
+      2- paste your original content on Plaremoverpro
+           artificial intelligence tool,in below picture</p>
+  </div>
+</div>
+</div>
+<!-- image two -->
+<div class="row" data-aos="zoom-in">
+<div class="containerss2">
+  <p style="padding: 20px;">3- Hit the Plaremoverpro Button to convert the text<br>
+    into a plagiarism free</p>
+  <img src="https://plagremoverpro.com/plagpro-images/c3.png" class="img-fluid" alt="" >
+</div>
+</div>
+<div style="height: 20px;"></div>
+<!-- image three -->
+<div class="row" data-aos="zoom-in">
+<div class="containerss2">
+  <img src="https://plagremoverpro.com/plagpro-images/c1.png"  class="img-fluid" alt="" >
+  <p style="padding: 20px;">4- Click on Copy button on top to copy 
+    plagiarismFree content</p>
+</div>
+</div>
+
+<!-- Why is a plagiarism remover tool so important...? -->
+<h2 style="padding-left: 30px; color: #FF6632;">Why is a plagiarism remover tool so important...?</h2>
+<div class="api_data">
+
+  <p> Our tool is very important for those people who want to convert their plagiarized content into 100%
+    plagiarism free content without wasting time. Our tool is easy to use, fast and secure. Our tool will
+    also replace your text in a consistent and high-quality way using synonyms and good sentences.
+    Our tool is ideal for anyone looking for a reliable and cost-effective plagiarism removal solution. 
+    So what are you waiting for? Start using the tool now. It's 101% FREE</p>
+</div>
+</div>
+
+
+
+
+
+<!-- ======= End FAQS Section ======= -->
+  <main id="main">
+
+  
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2 style="color: #FF6632;">Frequently Asked Questions</h2>
+          <p>These are Frequently asked question thats are most important for understanding PLAGIARISM REMOVER PRO</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Is Plaremoverpro tool Free...? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  Yes, there is no  charge meaning there will be no hidden payments or charges for any features
+                  included in the free service.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Is Plaremoverpro Effect on Search engin optimization...? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  When you are looking for search engine optimization content, it must be 100% original and unique.
+    If the web searches find any existing content that matches yours, it will reduce your chances of
+    an excellent SEO ranking
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Is Plaremoverpro  AI tool Worldwide...? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes, Plaremoverpro tool available in all over the world without any charges
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Is Plaremoverpro tool working offline...? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  INo, It works by using internet, because it need internet to fetch data from api using chatGPT and
+                  other AI tools
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+<!-- Add the progress dialog element to your HTML markup -->
+<div id="progress-dialog" class="progress-dialog">
+  <div class="spinner"></div>
+  <p>Loading...</p>
+</div>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    
+
+    <div class="footer-top">
+      <div class="container" style="align-items: center;">
+        <div class="row" style="align-items: center;">
+
+          <div class="col-lg-3 col-md-6 footer-contact" style="align-items: center;">
+            <h3 style="color: #FF6632;">Plagiarism Remover Pro </h3>
+            <p>
+                Building (63 ),Area 233  <br>
+                Street 281, Al-Khuwair South, P.O Box : 1075 <br>
+                Muscat,Oman <br><br>
+              <strong>Phone:</strong> +92 303-6710864<br>
+              <strong>Email:</strong> mitInfo@plagremoverpro.com<br>
+            </p>
+          </div>
+
+          
+          
+
+          <div  class="col-lg-3 col-md-6 footer-links" >
+            <h4>Our Social Networks</h4>
+            <p>you can contact us on these links we will provide help 24/7 for our hounerable user you can contact us on these links we will provide help 24/7 for our hounerable user</p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/mit_programmer" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100090378737707&_rdc=1&_rdr" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/programmermit/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://join.skype.com/invite/nwX6Rh4cCcgy" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix" style="margin-right: 50px;">
+      <div class="copyright">
+        &copy; Copyright 2023<strong><span> Plagremoverpro</span></strong>,All Rights Reserved.Powered by MIT Programmer 
+      </div>
+      <div class="credits" style="color: blue;">
+      
+        <a href="https://mitprogrammer.com/" style="color: blue;"></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
