@@ -140,8 +140,11 @@
 <script>
   var issave = true;
   function saveText() {
+    var text = document.getElementById("textView111").value.trim();
+    if(text===""){
+      return;
+    }
     if(issave){
-      var text = document.getElementById("textView111").value;
       document.getElementById("query-input").value = text;
       issave=false;
     }
@@ -197,6 +200,16 @@
         $(document).ready(function() {
   // Handle form submission
   $('#input-form').submit(function(event) {
+
+    var text = document.getElementById("textView111").value.trim();
+    if(text===""){
+      return;
+    }
+    var text = document.getElementById("query-input").value.trim();
+  if(text===""){
+    alert("Please enter some text before removing plagiarism.");
+    return;
+  }
     event.preventDefault();
 
     // Show the progress dialog

@@ -104,6 +104,11 @@ const content3 = document.querySelector('.content3');
 let isFirstClick = true;
 
 button.addEventListener('click', function() {
+   var text = document.getElementById("textView111").value.trim();
+  if(text===""){
+    alert("Please enter some text before removing plagiarism.");
+    return;
+  }
   // if (isFirstClick) {
     button.textContent = 'Remove Plagiarism Again';
     content3.style.display = 'none';
